@@ -607,7 +607,7 @@ if page == "🏠  Home":
     # ── Hero section ─────────────────────────────
     st.markdown("""
     <div class="hero-container">
-        <div class="hero-title">📄 Professional Resume Analyzer<br><span style="font-size:32px;font-weight:600;opacity:0.9">Supercharged by AI</span></div>
+       <div class="hero-title">SmartResume AI<br><span style="font-size:32px;font-weight:600;opacity:0.9">Supercharged by AI</span></div>
         <div class="hero-subtitle">
             Upload your resume and get instant ATS scoring, job description matching,
             interview prep, and a polished cover letter — all in one place.
