@@ -450,6 +450,186 @@ button[kind="header"],
     transform: translateY(-1px) !important;
     box-shadow: 0 6px 20px rgba(30,58,95,0.35) !important;
 }
+/* ═══════════════════════════════════════════════════
+   MOBILE RESPONSIVENESS
+   ═══════════════════════════════════════════════════ */
+@media screen and (max-width: 768px) {
+
+    /* ── Main content padding ── */
+    .main .block-container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        padding-top: 1rem !important;
+    }
+
+    /* ── Hero section ── */
+    .hero-container {
+        padding: 28px 20px !important;
+        border-radius: 14px !important;
+        margin-bottom: 20px !important;
+    }
+    .hero-title {
+        font-size: 26px !important;
+        line-height: 1.3 !important;
+    }
+    .hero-title span {
+        font-size: 18px !important;
+    }
+    .hero-subtitle {
+        font-size: 14px !important;
+        max-width: 100% !important;
+    }
+    .hero-badge {
+        font-size: 11px !important;
+        padding: 4px 10px !important;
+        margin-bottom: 6px !important;
+    }
+
+    /* ── Feature cards: 5 columns → 2 columns ── */
+    .features-row {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+    .feature-card {
+        padding: 14px 10px !important;
+    }
+    .feature-icon {
+        font-size: 22px !important;
+    }
+    .feature-title {
+        font-size: 12px !important;
+    }
+    .feature-desc {
+        font-size: 10px !important;
+    }
+
+    /* ── Steps row: horizontal → vertical stack ── */
+    .steps-row {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        padding: 16px 18px !important;
+        gap: 14px !important;
+    }
+    .step-item {
+        width: 100% !important;
+    }
+    .step-arrow {
+        display: none !important;
+    }
+
+    /* ── Upload box ── */
+    .upload-container {
+        padding: 18px 16px !important;
+    }
+    .upload-label {
+        font-size: 14px !important;
+    }
+    .upload-hint {
+        font-size: 11px !important;
+    }
+
+    /* ── Cards ── */
+    .card, .question-card, .bullet-card-old, .bullet-card-new {
+        padding: 14px 16px !important;
+    }
+    .cover-letter-box {
+        padding: 18px 20px !important;
+        font-size: 13px !important;
+    }
+
+    /* ── Section titles ── */
+    .section-title {
+        font-size: 15px !important;
+        margin-top: 16px !important;
+    }
+
+    /* ── Chips wrap better on small screens ── */
+    .chip-blue, .chip-green, .chip-red {
+        font-size: 11px !important;
+        padding: 3px 10px !important;
+    }
+
+    /* ── Badges ── */
+    .badge {
+        font-size: 10px !important;
+        padding: 2px 7px !important;
+    }
+
+    /* ── Sidebar: shrink logo and metrics ── */
+    .sidebar-logo-icon {
+        font-size: 28px !important;
+    }
+    .sidebar-logo-text {
+        font-size: 15px !important;
+    }
+    .sidebar-logo-sub {
+        font-size: 9px !important;
+    }
+    .sidebar-metric {
+        padding: 8px 10px !important;
+    }
+    .sidebar-metric-value {
+        font-size: 13px !important;
+    }
+
+    /* ── Gauge charts shrink to fit narrow screens ── */
+    .js-plotly-plot {
+        max-width: 100% !important;
+    }
+
+    /* ── Streamlit columns stack on mobile (CRITICAL) ── */
+    [data-testid="column"] {
+        width: 100% !important;
+        flex: 1 1 100% !important;
+        min-width: 100% !important;
+    }
+
+    /* ── Tabs: smaller text, allow horizontal scroll ── */
+    [data-testid="stTabs"] {
+        overflow-x: auto !important;
+    }
+    [data-testid="stTabs"] button {
+        font-size: 12px !important;
+        padding: 8px 10px !important;
+        white-space: nowrap !important;
+    }
+
+    /* ── Buttons full width and slightly smaller text ── */
+    .stButton button[kind="primary"] {
+        font-size: 13px !important;
+        padding: 10px 16px !important;
+    }
+
+    /* ── Metrics stack better ── */
+    [data-testid="stMetricValue"] {
+        font-size: 18px !important;
+    }
+    [data-testid="stMetricLabel"] {
+        font-size: 11px !important;
+    }
+
+    /* ── Text areas shrink height slightly for mobile ── */
+    .main textarea {
+        font-size: 13px !important;
+    }
+}
+
+/* ═══════════════════════════════════════════════════
+   EXTRA SMALL SCREENS (phones in portrait, narrow)
+   ═══════════════════════════════════════════════════ */
+@media screen and (max-width: 480px) {
+    .hero-title {
+        font-size: 22px !important;
+    }
+    .features-row {
+        grid-template-columns: 1fr !important;
+    }
+    .hero-badge {
+        display: block !important;
+        width: fit-content !important;
+        margin-bottom: 8px !important;
+    }
+}
 </style>
 """, unsafe_allow_html=True)
 
