@@ -12,6 +12,6 @@ jobs:
       - name: Ping Streamlit App
         run: |
           curl -L --max-time 180 --retry 3 --retry-delay 10 \
-          "https://smartresume-ai.streamlit.app" \
+          "https://smartresume-ai-1122.streamlit.app" \
           -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
           || echo "App may have been asleep, ping attempted"
