@@ -643,6 +643,9 @@ for key in ["parsed_data", "score_data", "resume_text", "last_file",
     if key not in st.session_state:
         st.session_state[key] = None
 
+if "analyzing" not in st.session_state:
+    st.session_state["analyzing"] = False
+
 
 # ═══════════════════════════════════════════════════
 # HELPERS
@@ -902,12 +905,19 @@ if page == "🏠  Home":
             st.text_area("", st.session_state["resume_text"],
                          height=280, label_visibility="collapsed")
 
-        if st.button("🔍  Analyze Resume", use_container_width=True, type="primary"):
-            with st.spinner("Analyzing your resume… (1 API call)"):
-                parsed, score_data = parse_resume_and_score(st.session_state["resume_text"])
-                st.session_state["parsed_data"] = parsed
-                st.session_state["score_data"]  = score_data
-            st.rerun()
+        if st.session_state.get("analyzing"):
+          st.info("⏳ Analysis in progress… please wait.")
+elif st.button("🔍  Analyze Resume", use_container_width=True, type="primary"):
+    st.session_state["analyzing"] = True
+    st.rerun()
+
+if st.session_state.get("analyzing"):
+    with st.spinner("Analyzing your resume… (1 API call)"):
+        parsed, score_data = parse_resume_and_score(st.session_state["resume_text"])
+        st.session_state["parsed_data"]  = parsed
+        st.session_state["score_data"]   = score_data
+        st.session_state["analyzing"]    = False
+    st.rerun()
 
     # ── Results ───────────────────────────────────
     if st.session_state["score_data"] is not None:

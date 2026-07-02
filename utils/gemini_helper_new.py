@@ -79,8 +79,11 @@ def _quota_score(message: str) -> dict:
 def ask_gemini(prompt: str, retries: int = 3, wait: int = 20) -> str:
     for attempt in range(retries):
         try:
-            response = model.generate_content(prompt)
-            return response.text.strip()
+             response = model.generate_content(
+              prompt,
+              request_options={"timeout": 60}
+             )
+             return response.text.strip()
 
         except Exception as e:
             error_msg = str(e)
