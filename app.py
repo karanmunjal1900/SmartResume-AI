@@ -46,7 +46,6 @@ html, body, [data-testid="stApp"], [data-testid="stAppViewContainer"] {
     font-family: 'Inter', sans-serif !important;
 }
 
-/* ── Header & toolbar ── */
 [data-testid="stHeader"] {
     background-color: #F7F9FC !important;
 }
@@ -60,7 +59,6 @@ button[kind="header"],
 [data-testid="stMainMenu"] svg,
 [data-testid="stStatusWidget"] svg { fill: #2C3E50 !important; }
 
-/* ── Sidebar ── */
 [data-testid="stSidebar"] {
     background: linear-gradient(180deg, #1E3A5F 0%, #162D4A 100%) !important;
     border-right: 1px solid #2E4F6F !important;
@@ -96,7 +94,6 @@ button[kind="header"],
     font-weight: 500 !important;
 }
 
-/* ── Hero section ── */
 .hero-container {
     background: linear-gradient(135deg, #1E3A5F 0%, #2E86AB 100%);
     border-radius: 20px;
@@ -149,7 +146,6 @@ button[kind="header"],
     backdrop-filter: blur(10px);
 }
 
-/* ── Feature cards ── */
 .features-row {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -171,24 +167,10 @@ button[kind="header"],
     border-color: #2E86AB;
     transform: translateY(-3px);
 }
-.feature-icon {
-    font-size: 28px;
-    margin-bottom: 10px;
-    display: block;
-}
-.feature-title {
-    font-size: 13px;
-    font-weight: 700;
-    color: #1E3A5F !important;
-    margin-bottom: 5px;
-}
-.feature-desc {
-    font-size: 11px;
-    color: #7F8C8D !important;
-    line-height: 1.5;
-}
+.feature-icon { font-size: 28px; margin-bottom: 10px; display: block; }
+.feature-title { font-size: 13px; font-weight: 700; color: #1E3A5F !important; margin-bottom: 5px; }
+.feature-desc { font-size: 11px; color: #7F8C8D !important; line-height: 1.5; }
 
-/* ── Steps row ── */
 .steps-row {
     display: flex;
     align-items: center;
@@ -200,435 +182,136 @@ button[kind="header"],
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     border: 1px solid #E8EDF5;
 }
-.step-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    flex: 1;
-}
+.step-item { display: flex; align-items: center; gap: 12px; flex: 1; }
 .step-number {
     width: 36px; height: 36px;
     background: linear-gradient(135deg, #1E3A5F, #2E86AB);
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white !important;
-    font-size: 15px;
-    font-weight: 700;
-    flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    color: white !important; font-size: 15px; font-weight: 700; flex-shrink: 0;
 }
-.step-text-title {
-    font-size: 13px;
-    font-weight: 700;
-    color: #1E3A5F !important;
-}
-.step-text-sub {
-    font-size: 11px;
-    color: #7F8C8D !important;
-}
-.step-arrow {
-    color: #BDC3CC !important;
-    font-size: 22px;
-    margin: 0 8px;
-    flex-shrink: 0;
-}
+.step-text-title { font-size: 13px; font-weight: 700; color: #1E3A5F !important; }
+.step-text-sub { font-size: 11px; color: #7F8C8D !important; }
+.step-arrow { color: #BDC3CC !important; font-size: 22px; margin: 0 8px; flex-shrink: 0; }
 
-/* ── Upload zone ── */
-.upload-container {
-    background: white;
-    border-radius: 16px;
-    padding: 28px 32px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-    border: 2px dashed #C5D3E0;
-    margin-bottom: 24px;
-    transition: border-color 0.2s;
-}
-.upload-label {
-    font-size: 16px;
-    font-weight: 700;
-    color: #1E3A5F !important;
-    margin-bottom: 6px;
-}
-.upload-hint {
-    font-size: 13px;
-    color: #7F8C8D !important;
-    margin-bottom: 16px;
-}
+.upload-label { font-size: 16px; font-weight: 700; color: #1E3A5F !important; margin-bottom: 6px; }
+.upload-hint { font-size: 13px; color: #7F8C8D !important; margin-bottom: 16px; }
 
-/* ── Sidebar progress tracker ── */
-.sidebar-logo {
-    text-align: center;
-    padding: 20px 0 8px 0;
-}
-.sidebar-logo-icon {
-    font-size: 36px;
-    display: block;
-    margin-bottom: 6px;
-}
-.sidebar-logo-text {
-    font-size: 18px !important;
-    font-weight: 800 !important;
-    color: white !important;
-    letter-spacing: -0.3px;
-}
-.sidebar-logo-sub {
-    font-size: 11px !important;
-    color: rgba(255,255,255,0.55) !important;
-    letter-spacing: 0.5px;
-}
-.progress-tracker {
-    background: rgba(0,0,0,0.2);
-    border-radius: 12px;
-    padding: 14px 16px;
-    margin: 10px 0;
-}
-.progress-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 5px 0;
-    font-size: 12px;
-    color: rgba(255,255,255,0.6) !important;
-}
-.progress-item.done {
-    color: #7FE5A0 !important;
-}
-.progress-dot {
-    width: 8px; height: 8px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.25);
-    flex-shrink: 0;
-}
-.progress-dot.done {
-    background: #27AE60;
-}
-.sidebar-metric {
-    background: rgba(255,255,255,0.08);
-    border-radius: 10px;
-    padding: 10px 14px;
-    margin: 5px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.sidebar-metric-label {
-    font-size: 12px !important;
-    color: rgba(255,255,255,0.6) !important;
-}
-.sidebar-metric-value {
-    font-size: 16px !important;
-    font-weight: 700 !important;
-    color: white !important;
-}
+.sidebar-logo { text-align: center; padding: 20px 0 8px 0; }
+.sidebar-logo-icon { font-size: 36px; display: block; margin-bottom: 6px; }
+.sidebar-logo-text { font-size: 18px !important; font-weight: 800 !important; color: white !important; letter-spacing: -0.3px; }
+.sidebar-logo-sub { font-size: 11px !important; color: rgba(255,255,255,0.55) !important; letter-spacing: 0.5px; }
 
-/* ── Cards ── */
+.progress-tracker { background: rgba(0,0,0,0.2); border-radius: 12px; padding: 14px 16px; margin: 10px 0; }
+.progress-item { display: flex; align-items: center; gap: 10px; padding: 5px 0; font-size: 12px; color: rgba(255,255,255,0.6) !important; }
+.progress-item.done { color: #7FE5A0 !important; }
+.progress-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.25); flex-shrink: 0; }
+.progress-dot.done { background: #27AE60; }
+
+.sidebar-metric { background: rgba(255,255,255,0.08); border-radius: 10px; padding: 10px 14px; margin: 5px 0; display: flex; justify-content: space-between; align-items: center; }
+.sidebar-metric-label { font-size: 12px !important; color: rgba(255,255,255,0.6) !important; }
+.sidebar-metric-value { font-size: 16px !important; font-weight: 700 !important; color: white !important; }
+
 .card {
-    background: white !important;
-    border-radius: 12px;
-    padding: 18px 22px;
-    margin-bottom: 14px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-    border-left: 4px solid #2E86AB;
-    color: #2C3E50 !important;
+    background: white !important; border-radius: 12px; padding: 18px 22px;
+    margin-bottom: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    border-left: 4px solid #2E86AB; color: #2C3E50 !important;
 }
 .question-card {
-    background: white !important;
-    border-radius: 12px;
-    padding: 16px 20px;
-    margin-bottom: 10px;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.06);
-    border-left: 4px solid #2E86AB;
-    color: #2C3E50 !important;
+    background: white !important; border-radius: 12px; padding: 16px 20px;
+    margin-bottom: 10px; box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+    border-left: 4px solid #2E86AB; color: #2C3E50 !important;
 }
 .bullet-card-old {
-    background: #FFF5F2 !important;
-    border-radius: 12px;
-    padding: 16px 20px;
-    margin-bottom: 10px;
-    border-left: 4px solid #E74C3C;
-    color: #2C3E50 !important;
-    height: 100%;
+    background: #FFF5F2 !important; border-radius: 12px; padding: 16px 20px;
+    margin-bottom: 10px; border-left: 4px solid #E74C3C; color: #2C3E50 !important; height: 100%;
 }
 .bullet-card-new {
-    background: #F0FDF4 !important;
-    border-radius: 12px;
-    padding: 16px 20px;
-    margin-bottom: 10px;
-    border-left: 4px solid #27AE60;
-    color: #2C3E50 !important;
-    height: 100%;
+    background: #F0FDF4 !important; border-radius: 12px; padding: 16px 20px;
+    margin-bottom: 10px; border-left: 4px solid #27AE60; color: #2C3E50 !important; height: 100%;
 }
 .cover-letter-box {
-    background: white !important;
-    border-radius: 12px;
-    padding: 30px 36px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    border: 1px solid #E0E6ED;
-    color: #2C3E50 !important;
-    font-size: 15px;
-    line-height: 1.8;
-    white-space: pre-wrap;
+    background: white !important; border-radius: 12px; padding: 30px 36px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08); border: 1px solid #E0E6ED;
+    color: #2C3E50 !important; font-size: 15px; line-height: 1.8; white-space: pre-wrap;
 }
 
-/* ── Keyword chips ── */
-.chip-blue {
-    display: inline-block; background: #2E86AB; color: white !important;
-    border-radius: 20px; padding: 4px 14px; margin: 3px;
-    font-size: 13px; font-weight: 600;
-}
-.chip-green {
-    display: inline-block; background: #27AE60; color: white !important;
-    border-radius: 20px; padding: 4px 14px; margin: 3px;
-    font-size: 13px; font-weight: 600;
-}
-.chip-red {
-    display: inline-block; background: #E74C3C; color: white !important;
-    border-radius: 20px; padding: 4px 14px; margin: 3px;
-    font-size: 13px; font-weight: 600;
-}
+.chip-blue { display: inline-block; background: #2E86AB; color: white !important; border-radius: 20px; padding: 4px 14px; margin: 3px; font-size: 13px; font-weight: 600; }
+.chip-green { display: inline-block; background: #27AE60; color: white !important; border-radius: 20px; padding: 4px 14px; margin: 3px; font-size: 13px; font-weight: 600; }
+.chip-red { display: inline-block; background: #E74C3C; color: white !important; border-radius: 20px; padding: 4px 14px; margin: 3px; font-size: 13px; font-weight: 600; }
 
-/* ── Question badges ── */
-.badge {
-    display: inline-block; border-radius: 6px; padding: 3px 10px;
-    font-size: 11px; font-weight: 700; color: white !important; margin-right: 8px;
-}
+.badge { display: inline-block; border-radius: 6px; padding: 3px 10px; font-size: 11px; font-weight: 700; color: white !important; margin-right: 8px; }
 .badge-tech  { background: #2E86AB; }
 .badge-proj  { background: #8E44AD; }
 .badge-behav { background: #27AE60; }
 .badge-sit   { background: #E67E22; }
 .badge-err   { background: #E74C3C; }
 
-/* ── Section titles ── */
-.section-title {
-    font-size: 17px; font-weight: 700; color: #1E3A5F !important;
-    margin-top: 24px; margin-bottom: 10px;
-    border-bottom: 2px solid #2E86AB; padding-bottom: 5px;
-}
+.section-title { font-size: 17px; font-weight: 700; color: #1E3A5F !important; margin-top: 24px; margin-bottom: 10px; border-bottom: 2px solid #2E86AB; padding-bottom: 5px; }
 
-/* ── Metric cards ── */
-[data-testid="stMetricValue"],
-[data-testid="stMetricLabel"],
-[data-testid="stMetricValue"] *,
-[data-testid="stMetricLabel"] * { color: #1E3A5F !important; }
-
-/* ── Alert boxes ── */
-[data-testid="stAlert"] p,
-[data-testid="stAlert"] * { color: inherit !important; }
-
-/* ── Tabs ── */
+[data-testid="stMetricValue"], [data-testid="stMetricLabel"],
+[data-testid="stMetricValue"] *, [data-testid="stMetricLabel"] * { color: #1E3A5F !important; }
+[data-testid="stAlert"] p, [data-testid="stAlert"] * { color: inherit !important; }
 [data-testid="stTabContent"] { overflow: visible !important; }
-[data-testid="stTabs"] button {
-    color: #1E3A5F !important; font-weight: 600;
-    font-family: 'Inter', sans-serif !important;
-}
-[data-testid="stTabs"] button[aria-selected="true"] {
-    color: #2E86AB !important; border-bottom-color: #2E86AB !important;
-}
+[data-testid="stTabs"] button { color: #1E3A5F !important; font-weight: 600; font-family: 'Inter', sans-serif !important; }
+[data-testid="stTabs"] button[aria-selected="true"] { color: #2E86AB !important; border-bottom-color: #2E86AB !important; }
 [data-testid="stTabs"] button p { color: inherit !important; }
 
-/* ── Widgets ── */
-.main textarea, .main input {
-    background-color: white !important; color: #2C3E50 !important;
-    font-family: 'Inter', sans-serif !important;
-    border-radius: 10px !important;
-}
+.main textarea, .main input { background-color: white !important; color: #2C3E50 !important; font-family: 'Inter', sans-serif !important; border-radius: 10px !important; }
 [data-testid="stFileUploaderDropzone"] { background-color: white !important; }
 [data-testid="stFileUploaderDropzone"] *:not(svg):not(path) { color: #2C3E50 !important; }
 [data-testid="stWidgetLabel"] p, .main label { color: #2C3E50 !important; }
 
-/* ── Primary button ── */
 .stButton button[kind="primary"] {
     background: linear-gradient(135deg, #1E3A5F, #2E86AB) !important;
     border: none !important; border-radius: 10px !important;
     font-weight: 600 !important; font-size: 15px !important;
-    padding: 12px 24px !important; color: white !important;
-    transition: all 0.2s !important;
+    padding: 12px 24px !important; color: white !important; transition: all 0.2s !important;
 }
 .stButton button[kind="primary"]:hover {
-    opacity: 0.92 !important;
-    transform: translateY(-1px) !important;
+    opacity: 0.92 !important; transform: translateY(-1px) !important;
     box-shadow: 0 6px 20px rgba(30,58,95,0.35) !important;
 }
-/* ═══════════════════════════════════════════════════
-   MOBILE RESPONSIVENESS
-   ═══════════════════════════════════════════════════ */
+
 @media screen and (max-width: 768px) {
-
-    /* ── Main content padding ── */
-    .main .block-container {
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
-        padding-top: 1rem !important;
-    }
-
-    /* ── Hero section ── */
-    .hero-container {
-        padding: 28px 20px !important;
-        border-radius: 14px !important;
-        margin-bottom: 20px !important;
-    }
-    .hero-title {
-        font-size: 26px !important;
-        line-height: 1.3 !important;
-    }
-    .hero-title span {
-        font-size: 18px !important;
-    }
-    .hero-subtitle {
-        font-size: 14px !important;
-        max-width: 100% !important;
-    }
-    .hero-badge {
-        font-size: 11px !important;
-        padding: 4px 10px !important;
-        margin-bottom: 6px !important;
-    }
-
-    /* ── Feature cards: 5 columns → 2 columns ── */
-    .features-row {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 10px !important;
-    }
-    .feature-card {
-        padding: 14px 10px !important;
-    }
-    .feature-icon {
-        font-size: 22px !important;
-    }
-    .feature-title {
-        font-size: 12px !important;
-    }
-    .feature-desc {
-        font-size: 10px !important;
-    }
-
-    /* ── Steps row: horizontal → vertical stack ── */
-    .steps-row {
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        padding: 16px 18px !important;
-        gap: 14px !important;
-    }
-    .step-item {
-        width: 100% !important;
-    }
-    .step-arrow {
-        display: none !important;
-    }
-
-    /* ── Upload box ── */
-    .upload-container {
-        padding: 18px 16px !important;
-    }
-    .upload-label {
-        font-size: 14px !important;
-    }
-    .upload-hint {
-        font-size: 11px !important;
-    }
-
-    /* ── Cards ── */
-    .card, .question-card, .bullet-card-old, .bullet-card-new {
-        padding: 14px 16px !important;
-    }
-    .cover-letter-box {
-        padding: 18px 20px !important;
-        font-size: 13px !important;
-    }
-
-    /* ── Section titles ── */
-    .section-title {
-        font-size: 15px !important;
-        margin-top: 16px !important;
-    }
-
-    /* ── Chips wrap better on small screens ── */
-    .chip-blue, .chip-green, .chip-red {
-        font-size: 11px !important;
-        padding: 3px 10px !important;
-    }
-
-    /* ── Badges ── */
-    .badge {
-        font-size: 10px !important;
-        padding: 2px 7px !important;
-    }
-
-    /* ── Sidebar: shrink logo and metrics ── */
-    .sidebar-logo-icon {
-        font-size: 28px !important;
-    }
-    .sidebar-logo-text {
-        font-size: 15px !important;
-    }
-    .sidebar-logo-sub {
-        font-size: 9px !important;
-    }
-    .sidebar-metric {
-        padding: 8px 10px !important;
-    }
-    .sidebar-metric-value {
-        font-size: 13px !important;
-    }
-
-    /* ── Gauge charts shrink to fit narrow screens ── */
-    .js-plotly-plot {
-        max-width: 100% !important;
-    }
-
-    /* ── Streamlit columns stack on mobile (CRITICAL) ── */
-    [data-testid="column"] {
-        width: 100% !important;
-        flex: 1 1 100% !important;
-        min-width: 100% !important;
-    }
-
-    /* ── Tabs: smaller text, allow horizontal scroll ── */
-    [data-testid="stTabs"] {
-        overflow-x: auto !important;
-    }
-    [data-testid="stTabs"] button {
-        font-size: 12px !important;
-        padding: 8px 10px !important;
-        white-space: nowrap !important;
-    }
-
-    /* ── Buttons full width and slightly smaller text ── */
-    .stButton button[kind="primary"] {
-        font-size: 13px !important;
-        padding: 10px 16px !important;
-    }
-
-    /* ── Metrics stack better ── */
-    [data-testid="stMetricValue"] {
-        font-size: 18px !important;
-    }
-    [data-testid="stMetricLabel"] {
-        font-size: 11px !important;
-    }
-
-    /* ── Text areas shrink height slightly for mobile ── */
-    .main textarea {
-        font-size: 13px !important;
-    }
+    .main .block-container { padding-left: 1rem !important; padding-right: 1rem !important; padding-top: 1rem !important; }
+    .hero-container { padding: 28px 20px !important; border-radius: 14px !important; margin-bottom: 20px !important; }
+    .hero-title { font-size: 26px !important; line-height: 1.3 !important; }
+    .hero-title span { font-size: 18px !important; }
+    .hero-subtitle { font-size: 14px !important; max-width: 100% !important; }
+    .hero-badge { font-size: 11px !important; padding: 4px 10px !important; margin-bottom: 6px !important; }
+    .features-row { grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; }
+    .feature-card { padding: 14px 10px !important; }
+    .feature-icon { font-size: 22px !important; }
+    .feature-title { font-size: 12px !important; }
+    .feature-desc { font-size: 10px !important; }
+    .steps-row { flex-direction: column !important; align-items: flex-start !important; padding: 16px 18px !important; gap: 14px !important; }
+    .step-item { width: 100% !important; }
+    .step-arrow { display: none !important; }
+    .card, .question-card, .bullet-card-old, .bullet-card-new { padding: 14px 16px !important; }
+    .cover-letter-box { padding: 18px 20px !important; font-size: 13px !important; }
+    .section-title { font-size: 15px !important; margin-top: 16px !important; }
+    .chip-blue, .chip-green, .chip-red { font-size: 11px !important; padding: 3px 10px !important; }
+    .badge { font-size: 10px !important; padding: 2px 7px !important; }
+    .sidebar-logo-icon { font-size: 28px !important; }
+    .sidebar-logo-text { font-size: 15px !important; }
+    .sidebar-logo-sub { font-size: 9px !important; }
+    .sidebar-metric { padding: 8px 10px !important; }
+    .sidebar-metric-value { font-size: 13px !important; }
+    .js-plotly-plot { max-width: 100% !important; }
+    [data-testid="column"] { width: 100% !important; flex: 1 1 100% !important; min-width: 100% !important; }
+    [data-testid="stTabs"] { overflow-x: auto !important; }
+    [data-testid="stTabs"] button { font-size: 12px !important; padding: 8px 10px !important; white-space: nowrap !important; }
+    .stButton button[kind="primary"] { font-size: 13px !important; padding: 10px 16px !important; }
+    [data-testid="stMetricValue"] { font-size: 18px !important; }
+    [data-testid="stMetricLabel"] { font-size: 11px !important; }
+    .main textarea { font-size: 13px !important; }
 }
 
-/* ═══════════════════════════════════════════════════
-   EXTRA SMALL SCREENS (phones in portrait, narrow)
-   ═══════════════════════════════════════════════════ */
 @media screen and (max-width: 480px) {
-    .hero-title {
-        font-size: 22px !important;
-    }
-    .features-row {
-        grid-template-columns: 1fr !important;
-    }
-    .hero-badge {
-        display: block !important;
-        width: fit-content !important;
-        margin-bottom: 8px !important;
-    }
+    .hero-title { font-size: 22px !important; }
+    .features-row { grid-template-columns: 1fr !important; }
+    .hero-badge { display: block !important; width: fit-content !important; margin-bottom: 8px !important; }
 }
 </style>
 """, unsafe_allow_html=True)
@@ -652,9 +335,12 @@ if "analyzing" not in st.session_state:
 # ═══════════════════════════════════════════════════
 def make_gauge(score: int, title: str = "ATS Score", suffix: str = "/100"):
     score = int(score or 0)
-    if score >= 70:   colour, label = "#27AE60", "Excellent"
-    elif score >= 45: colour, label = "#E67E22", "Fair"
-    else:             colour, label = "#E74C3C", "Needs Work"
+    if score >= 70:
+        colour, label = "#27AE60", "Excellent"
+    elif score >= 45:
+        colour, label = "#E67E22", "Fair"
+    else:
+        colour, label = "#E74C3C", "Needs Work"
     fig = go.Figure(go.Indicator(
         mode="gauge+number",
         value=score,
@@ -666,28 +352,39 @@ def make_gauge(score: int, title: str = "ATS Score", suffix: str = "/100"):
             "steps": [
                 {"range": [0,  45], "color": "#FDECEA"},
                 {"range": [45, 70], "color": "#FFF8E1"},
-                {"range": [70, 100],"color": "#E8F5E9"},
+                {"range": [70, 100], "color": "#E8F5E9"},
             ],
             "threshold": {"line": {"color": colour, "width": 4}, "thickness": 0.78, "value": score},
         },
-        title={"text": f"{title}<br><span style='font-size:13px;color:{colour}'>{label}</span>",
-               "font": {"size": 17, "color": "#1E3A5F"}},
+        title={
+            "text": f"{title}<br><span style='font-size:13px;color:{colour}'>{label}</span>",
+            "font": {"size": 17, "color": "#1E3A5F"}
+        },
     ))
-    fig.update_layout(height=270, margin=dict(t=50, b=10, l=30, r=30),
-                      paper_bgcolor="white", font={"color": "#2C3E50", "family": "Inter"})
+    fig.update_layout(
+        height=270, margin=dict(t=50, b=10, l=30, r=30),
+        paper_bgcolor="white", font={"color": "#2C3E50", "family": "Inter"}
+    )
     return fig
 
 
 def section(title: str):
     st.markdown(f'<div class="section-title">{title}</div>', unsafe_allow_html=True)
 
+
 def chips(keywords: list, colour: str = "blue") -> str:
     return " ".join(f'<span class="chip-{colour}">{k}</span>' for k in keywords)
 
+
 def badge_html(qtype: str) -> str:
-    cls = {"Technical":"badge-tech","Project-Based":"badge-proj",
-           "Behavioral":"badge-behav","Situational":"badge-sit"}.get(qtype, "badge-err")
+    cls = {
+        "Technical": "badge-tech",
+        "Project-Based": "badge-proj",
+        "Behavioral": "badge-behav",
+        "Situational": "badge-sit"
+    }.get(qtype, "badge-err")
     return f'<span class="badge {cls}">{qtype}</span>'
+
 
 def quota_guard(text: str):
     if "QUOTA_EXCEEDED" in str(text) or "quota" in str(text).lower():
@@ -705,7 +402,6 @@ def quota_guard(text: str):
 # SIDEBAR
 # ═══════════════════════════════════════════════════
 with st.sidebar:
-    # Logo
     st.markdown("""
     <div class="sidebar-logo">
         <span class="sidebar-logo-icon">📄</span>
@@ -725,12 +421,11 @@ with st.sidebar:
 
     st.markdown("---")
 
-    # Progress tracker
-    has_resume   = bool(st.session_state["resume_text"])
-    has_score    = bool(st.session_state["score_data"])
-    has_jd       = bool(st.session_state["jd_match"])
-    has_qs       = bool(st.session_state["interview_qs"])
-    has_letter   = bool(st.session_state["cover_letter"])
+    has_resume = bool(st.session_state["resume_text"])
+    has_score  = bool(st.session_state["score_data"])
+    has_jd     = bool(st.session_state["jd_match"])
+    has_qs     = bool(st.session_state["interview_qs"])
+    has_letter = bool(st.session_state["cover_letter"])
 
     def prog_item(label, done):
         dot_cls  = "done" if done else ""
@@ -748,9 +443,8 @@ with st.sidebar:
     </div>
     """, unsafe_allow_html=True)
 
-    # Live metrics
     if has_score:
-        score = int(st.session_state["score_data"].get("score", 0) or 0)
+        score  = int(st.session_state["score_data"].get("score", 0) or 0)
         colour = "#27AE60" if score >= 70 else ("#E67E22" if score >= 45 else "#E74C3C")
         st.markdown(f"""
         <div class="sidebar-metric">
@@ -787,10 +481,9 @@ with st.sidebar:
 # ═══════════════════════════════════════════════════
 if page == "🏠  Home":
 
-    # ── Hero section ─────────────────────────────
     st.markdown("""
     <div class="hero-container">
-       <div class="hero-title">SmartResume AI<br><span style="font-size:32px;font-weight:600;opacity:0.9">Supercharged by AI</span></div>
+        <div class="hero-title">SmartResume AI<br><span style="font-size:32px;font-weight:600;opacity:0.9">Supercharged by AI</span></div>
         <div class="hero-subtitle">
             Upload your resume and get instant ATS scoring, job description matching,
             interview prep, and a polished cover letter — all in one place.
@@ -802,7 +495,6 @@ if page == "🏠  Home":
     </div>
     """, unsafe_allow_html=True)
 
-    # ── Feature cards ─────────────────────────────
     st.markdown("""
     <div class="features-row">
         <div class="feature-card">
@@ -833,7 +525,6 @@ if page == "🏠  Home":
     </div>
     """, unsafe_allow_html=True)
 
-    # ── How it works steps ────────────────────────
     st.markdown("""
     <div class="steps-row">
         <div class="step-item">
@@ -878,7 +569,6 @@ if page == "🏠  Home":
     </div>
     """, unsafe_allow_html=True)
 
-    # ── Upload + Analyze ──────────────────────────
     st.markdown("""
     <div class="upload-label">📂 Upload Your Resume</div>
     <div class="upload-hint">Supports PDF format · Your file is processed locally and never stored</div>
@@ -888,16 +578,17 @@ if page == "🏠  Home":
 
     if uploaded_file is not None:
         if st.session_state["last_file"] != uploaded_file.name:
-            st.session_state["resume_text"]    = extract_text(uploaded_file)
-            st.session_state["last_file"]       = uploaded_file.name
-            st.session_state["parsed_data"]     = None
-            st.session_state["score_data"]      = None
-            st.session_state["jd_match"]        = None
-            st.session_state["interview_qs"]    = None
-            st.session_state["jd_text_cache"]   = None
-            st.session_state["bullet_rewrites"] = None
-            st.session_state["cover_letter"]    = None
-            st.session_state["pdf_bytes"]       = None
+            st.session_state["resume_text"]     = extract_text(uploaded_file)
+            st.session_state["last_file"]        = uploaded_file.name
+            st.session_state["parsed_data"]      = None
+            st.session_state["score_data"]       = None
+            st.session_state["jd_match"]         = None
+            st.session_state["interview_qs"]     = None
+            st.session_state["jd_text_cache"]    = None
+            st.session_state["bullet_rewrites"]  = None
+            st.session_state["cover_letter"]     = None
+            st.session_state["pdf_bytes"]        = None
+            st.session_state["analyzing"]        = False
 
         st.success(f"✅ **{uploaded_file.name}** uploaded successfully!")
 
@@ -906,20 +597,19 @@ if page == "🏠  Home":
                          height=280, label_visibility="collapsed")
 
         if not st.session_state.get("analyzing"):
-         if st.button("🔍  Analyze Resume", use_container_width=True, type="primary"):
-          st.session_state["analyzing"] = True
-          st.rerun()
+            if st.button("🔍  Analyze Resume", use_container_width=True, type="primary"):
+                st.session_state["analyzing"] = True
+                st.rerun()
         else:
-         with st.spinner("Analyzing your resume… (1 API call)"):
-          parsed, score_data = parse_resume_and_score(
-            st.session_state["resume_text"]
-        )
-        st.session_state["parsed_data"]  = parsed
-        st.session_state["score_data"]   = score_data
-        st.session_state["analyzing"]    = False
-    st.rerun()
+            with st.spinner("Analyzing your resume… (1 API call)"):
+                parsed, score_data = parse_resume_and_score(
+                    st.session_state["resume_text"]
+                )
+                st.session_state["parsed_data"] = parsed
+                st.session_state["score_data"]  = score_data
+                st.session_state["analyzing"]   = False
+            st.rerun()
 
-    # ── Results ───────────────────────────────────
     if st.session_state["score_data"] is not None:
         data       = st.session_state["parsed_data"]
         score_data = st.session_state["score_data"]
@@ -941,8 +631,10 @@ if page == "🏠  Home":
                 st.plotly_chart(make_gauge(score), use_container_width=True)
             with col_v:
                 st.markdown("#### 📝 Verdict")
-                st.markdown(f'<div class="card">{score_data.get("verdict","No verdict available.")}</div>',
-                            unsafe_allow_html=True)
+                st.markdown(
+                    f'<div class="card">{score_data.get("verdict", "No verdict available.")}</div>',
+                    unsafe_allow_html=True
+                )
                 st.progress(score / 100, text=f"ATS Score: {score}/100")
             col_s, col_w = st.columns(2, gap="medium")
             with col_s:
@@ -973,8 +665,11 @@ if page == "🏠  Home":
             section("🎓 Education")
             for edu in data.get("education", []):
                 if isinstance(edu, dict):
-                    st.markdown(f"**{edu.get('degree','')}**  \n"
-                                f"🏫 {edu.get('institution','')}  \n📅 {edu.get('date','')}")
+                    st.markdown(
+                        f"**{edu.get('degree', '')}**  \n"
+                        f"🏫 {edu.get('institution', '')}  \n"
+                        f"📅 {edu.get('date', '')}"
+                    )
                     st.divider()
 
         with tab_exp:
@@ -983,9 +678,12 @@ if page == "🏠  Home":
             if experience:
                 for exp in experience:
                     if isinstance(exp, dict):
-                        st.markdown(f"**{exp.get('role','')}**  \n"
-                                    f"🏢 {exp.get('company','')}  \n"
-                                    f"📅 {exp.get('duration','')}  \n{exp.get('description','')}")
+                        st.markdown(
+                            f"**{exp.get('role', '')}**  \n"
+                            f"🏢 {exp.get('company', '')}  \n"
+                            f"📅 {exp.get('duration', '')}  \n"
+                            f"{exp.get('description', '')}"
+                        )
                         st.divider()
             else:
                 st.info("No experience found.")
@@ -996,7 +694,10 @@ if page == "🏠  Home":
             if projects:
                 for p in projects:
                     if isinstance(p, dict):
-                        st.markdown(f"**{p.get('title','')}**  \n{p.get('description','')}")
+                        st.markdown(
+                            f"**{p.get('title', '')}**  \n"
+                            f"{p.get('description', '')}"
+                        )
                         st.divider()
             else:
                 st.info("No projects found.")
@@ -1007,13 +708,17 @@ if page == "🏠  Home":
             if certs:
                 for cert in certs:
                     if isinstance(cert, dict):
-                        st.markdown(f"**{cert.get('name','')}**  \n"
-                                    f"🏢 {cert.get('issuer','')}  \n📅 {cert.get('date','')}")
+                        st.markdown(
+                            f"**{cert.get('name', '')}**  \n"
+                            f"🏢 {cert.get('issuer', '')}  \n"
+                            f"📅 {cert.get('date', '')}"
+                        )
                         st.divider()
                     else:
                         st.write(f"• {cert}")
             else:
                 st.info("No certifications found.")
+
             section("🏆 Achievements")
             for ach in data.get("achievements", []):
                 st.success(ach)
@@ -1031,8 +736,11 @@ elif page == "🎯  JD Matcher":
         st.warning("⚠️ Please upload and analyze your resume first on the **🏠 Home** page.")
         st.stop()
 
-    jd_text = st.text_area("Paste Job Description here", height=220,
-        placeholder="e.g. We are looking for a Python developer with experience in Machine Learning, TensorFlow, NLP…")
+    jd_text = st.text_area(
+        "Paste Job Description here",
+        height=220,
+        placeholder="e.g. We are looking for a Python developer with experience in Machine Learning, TensorFlow, NLP…"
+    )
 
     if st.button("🎯  Match Resume to JD", use_container_width=True, type="primary"):
         if not jd_text.strip():
@@ -1064,18 +772,23 @@ elif page == "🎯  JD Matcher":
                     "steps": [
                         {"range": [0,  45], "color": "#FDECEA"},
                         {"range": [45, 70], "color": "#FFF8E1"},
-                        {"range": [70, 100],"color": "#E8F5E9"},
+                        {"range": [70, 100], "color": "#E8F5E9"},
                     ],
                     "threshold": {"line": {"color": mc, "width": 4}, "thickness": 0.78, "value": ms},
                 },
-                title={"text": f"JD Match Score<br><span style='font-size:13px;color:{mc}'>{ml}</span>",
-                       "font": {"size": 17, "color": "#1E3A5F"}},
+                title={
+                    "text": f"JD Match Score<br><span style='font-size:13px;color:{mc}'>{ml}</span>",
+                    "font": {"size": 17, "color": "#1E3A5F"}
+                },
             ))
             fig.update_layout(height=270, margin=dict(t=50, b=10, l=30, r=30), paper_bgcolor="white")
             st.plotly_chart(fig, use_container_width=True)
         with col_v:
             st.markdown("#### 📝 Match Verdict")
-            st.markdown(f'<div class="card">{m.get("match_verdict","")}</div>', unsafe_allow_html=True)
+            st.markdown(
+                f'<div class="card">{m.get("match_verdict", "")}</div>',
+                unsafe_allow_html=True
+            )
             st.progress(ms / 100, text=f"Match Score: {ms}%")
 
         st.divider()
@@ -1107,9 +820,12 @@ elif page == "🎤  Interview Prep":
         st.stop()
 
     prefill  = st.session_state.get("jd_text_cache") or ""
-    jd_input = st.text_area("Paste Job Description for targeted questions (optional)",
-        value=prefill, height=150,
-        placeholder="Leave blank for general questions based only on your resume…")
+    jd_input = st.text_area(
+        "Paste Job Description for targeted questions (optional)",
+        value=prefill,
+        height=150,
+        placeholder="Leave blank for general questions based only on your resume…"
+    )
 
     if st.button("🎤  Generate Interview Questions", use_container_width=True, type="primary"):
         with st.spinner("Generating questions… (1 API call)"):
@@ -1135,9 +851,10 @@ elif page == "🎤  Interview Prep":
 
         for q in qs:
             st.markdown(
-                f'<div class="question-card">{badge_html(q.get("type","General"))}'
-                f'<strong>Q{q.get("number","")}.</strong> {q.get("question","")}</div>',
-                unsafe_allow_html=True)
+                f'<div class="question-card">{badge_html(q.get("type", "General"))}'
+                f'<strong>Q{q.get("number", "")}.</strong> {q.get("question", "")}</div>',
+                unsafe_allow_html=True
+            )
 
 
 # ═══════════════════════════════════════════════════
@@ -1148,8 +865,11 @@ elif page == "✏️  Bullet Rewriter":
     st.markdown("Paste weak resume bullets and get AI-powered, impact-driven rewrites.")
     st.divider()
 
-    bullets_input = st.text_area("Paste your resume bullets (one per line)", height=180,
-        placeholder="Created an AI project.\nWorked on a team to build a website.\nDid data analysis for college project.")
+    bullets_input = st.text_area(
+        "Paste your resume bullets (one per line)",
+        height=180,
+        placeholder="Created an AI project.\nWorked on a team to build a website.\nDid data analysis for college project."
+    )
 
     if st.button("✨  Rewrite Bullets", use_container_width=True, type="primary"):
         if not bullets_input.strip():
@@ -1169,11 +889,15 @@ elif page == "✏️  Bullet Rewriter":
         for rw in rewrites:
             col_old, col_new = st.columns(2, gap="medium")
             with col_old:
-                st.markdown(f'<div class="bullet-card-old"><b>❌ Original</b><br><br>{rw.get("original","")}</div>',
-                            unsafe_allow_html=True)
+                st.markdown(
+                    f'<div class="bullet-card-old"><b>❌ Original</b><br><br>{rw.get("original", "")}</div>',
+                    unsafe_allow_html=True
+                )
             with col_new:
-                st.markdown(f'<div class="bullet-card-new"><b>✅ Improved</b><br><br>{rw.get("improved","")}</div>',
-                            unsafe_allow_html=True)
+                st.markdown(
+                    f'<div class="bullet-card-new"><b>✅ Improved</b><br><br>{rw.get("improved", "")}</div>',
+                    unsafe_allow_html=True
+                )
             st.markdown("")
 
 
@@ -1195,11 +919,18 @@ elif page == "✉️  Cover Letter":
     with col_role:
         role_title = st.text_input("Role Title (optional)", placeholder="e.g. Software Engineer Intern")
 
-    tone = st.selectbox("Tone", ["Professional", "Enthusiastic", "Confident", "Formal", "Conversational"])
+    tone = st.selectbox(
+        "Tone",
+        ["Professional", "Enthusiastic", "Confident", "Formal", "Conversational"]
+    )
 
     prefill_jd = st.session_state.get("jd_text_cache") or ""
-    jd_text    = st.text_area("Paste Job Description", value=prefill_jd, height=200,
-                               placeholder="Paste the job description you're applying to…")
+    jd_text    = st.text_area(
+        "Paste Job Description",
+        value=prefill_jd,
+        height=200,
+        placeholder="Paste the job description you're applying to…"
+    )
 
     if st.button("✉️  Generate Cover Letter", use_container_width=True, type="primary"):
         if not jd_text.strip():
@@ -1208,8 +939,11 @@ elif page == "✉️  Cover Letter":
             with st.spinner("Writing your cover letter… (1 API call)"):
                 result = generate_cover_letter(
                     resume_text=st.session_state["resume_text"],
-                    jd_text=jd_text, tone=tone,
-                    company_name=company_name, role_title=role_title)
+                    jd_text=jd_text,
+                    tone=tone,
+                    company_name=company_name,
+                    role_title=role_title
+                )
                 st.session_state["cover_letter"] = result.get("cover_letter", "")
             st.rerun()
 
@@ -1219,9 +953,13 @@ elif page == "✉️  Cover Letter":
         st.divider()
         section("✉️ Your Cover Letter")
         st.markdown(f'<div class="cover-letter-box">{letter}</div>', unsafe_allow_html=True)
-        st.download_button(label="⬇️ Download as Text File", data=letter,
-                           file_name="Cover_Letter.txt", mime="text/plain",
-                           use_container_width=True)
+        st.download_button(
+            label="⬇️ Download as Text File",
+            data=letter,
+            file_name="Cover_Letter.txt",
+            mime="text/plain",
+            use_container_width=True
+        )
 
 
 # ═══════════════════════════════════════════════════
