@@ -902,7 +902,7 @@ if page == "🏠  Home":
         st.success(f"✅ **{uploaded_file.name}** uploaded successfully!")
 
         with st.expander("📃 View Extracted Resume Text", expanded=False):
-            st.text_area("", st.session_state["resume_text"],
+            st.text_area("Resume Text", st.session_state["resume_text"],
                          height=280, label_visibility="collapsed")
 
         if not st.session_state.get("analyzing"):
