@@ -884,7 +884,7 @@ if page == "🏠  Home":
     <div class="upload-hint">Supports PDF format · Your file is processed locally and never stored</div>
     """, unsafe_allow_html=True)
 
-    uploaded_file = st.file_uploader("", type=["pdf"], label_visibility="collapsed")
+    uploaded_file = st.file_uploader("Upload Resume", type=["pdf"], label_visibility="collapsed")
 
     if uploaded_file is not None:
         if st.session_state["last_file"] != uploaded_file.name:
